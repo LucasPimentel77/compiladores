@@ -1,61 +1,72 @@
 grammar PyLike;
 
 // =======================
-// Parser Rules
+// Regras do Parser
 // =======================
 
-program: statement* EOF ;
+programa: declaracao* EOF ;
 
-statement
-    : funcDecl
-    | ifStat
-    | whileStat
-    | forStat
-    | returnStat
-    | assignment
-    | expression SEMI? 
-    | block
+declaracao
+    : declaracaoFuncao
+    | comandos
+    | declaracaoSe
+    | declaracaoEnquanto
+    | declaracaoPara
+    | declaracaoRetorno
+    | atribuicao
+    | expressao
+    | bloco
     ;
 
-block: LBRACE statement* RBRACE ;
+comandos
+    : escreva
+    | leia
+    ;
+    
+bloco: LBRACE declaracao* RBRACE ;
 
-funcDecl: DEF ID LPAREN paramList? RPAREN block ;
-paramList: ID (COMMA ID)* ;
+declaracaoFuncao: DEF ID LPAREN listaParametros? RPAREN bloco ;
+listaParametros: ID (COMMA ID)* ;
 
-ifStat: IF cond block (ELIF cond block)* (ELSE block)? ;
-cond: LPAREN expression RPAREN | expression ;
+escreva: PRINT LPAREN expressao ( COMMA expressao)* RPAREN ;
+leia: INPUT LPAREN expressao? RPAREN ;
 
-whileStat: WHILE cond block ;
-forStat: FOR ID IN expression block ;
-returnStat: RETURN expression? SEMI? ;
+declaracaoSe: IF condicao bloco (ELIF condicao bloco)* (ELSE bloco)? ;
+condicao: LPAREN expressao RPAREN | expressao ;
 
-assignment: ID ASSIGN expression SEMI? ;
+declaracaoEnquanto: WHILE condicao bloco ;
+declaracaoPara: FOR ID IN expressao bloco ;
+declaracaoRetorno: RETURN expressao? ;
+
+atribuicao: ID ASSIGN atribuivel ;
+atribuivel: expressao | comandos ;
 
 // -----------------------
-// Expressions
+// Expressões
 // -----------------------
 
-expression: logicOr ;
+expressao: logicoOu ;
 
-logicOr  : logicAnd ( OR logicAnd )* ;
-logicAnd : equality ( AND equality )* ;
-equality : comparison ( (EQ | NEQ) comparison )* ;
-comparison : addition ( (LT | LTE | GT | GTE) addition )* ;
-addition : multiplication ( (PLUS | MINUS) multiplication )* ;
-multiplication : unary ( (MUL | DIV | MOD) unary )* ;
-unary : (NOT | MINUS) unary | primary ;
+logicoOu  : logicoE ( OR logicoE )* ;
+logicoE   : igualdade ( AND igualdade )* ;
+igualdade : comparacao ( (EQ | NEQ) comparacao )* ;
+comparacao: adicao ( (LT | LTE | GT | GTE) adicao )* ;
+adicao    : multiplicacao ( (PLUS | MINUS) multiplicacao )* ;
+multiplicacao: unario ( (MUL | DIV | MOD) unario )* ;
+unario    : (NOT | MINUS) unario | primario ;
 
-primary
+primario
     : literal
     | ID
-    | functionCall
-    | LPAREN expression RPAREN
+    | chamadaFuncao
+    | LPAREN expressao RPAREN
     ;
 
-functionCall: ID LPAREN argList? RPAREN ;
-argList: expression (COMMA expression)* ;
+chamadaFuncao: ID LPAREN listaArgumentos? RPAREN ;
+listaArgumentos: expressao (COMMA expressao)* ;
 
 literal: NUMBER | STRING | TRUE | FALSE | NONE ;
+
 
 // =======================
 // Lexer Tokens
@@ -70,6 +81,8 @@ WHILE: 'while' ;
 FOR: 'for' ;
 IN: 'in' ;
 RETURN: 'return' ;
+PRINT: 'print' ;
+INPUT: 'input' ;
 AND: 'and' ;
 OR: 'or' ;
 NOT: 'not' ;
@@ -93,7 +106,6 @@ DIV: '/' ;
 MOD: '%' ;
 
 // Symbols
-SEMI: ';' ;
 COMMA: ',' ;
 LPAREN: '(' ;
 RPAREN: ')' ;
