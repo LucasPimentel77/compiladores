@@ -1,116 +1,102 @@
-# Generated from PyLike.g4 by ANTLR 4.5.1
+# Generated from PyLike.g4 by ANTLR 4.13.1
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
+import sys
+if sys.version_info[1] > 5:
+	from typing import TextIO
+else:
+	from typing.io import TextIO
 
 def serializedATN():
-    with StringIO() as buf:
-        buf.write("\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3-")
-        buf.write("\u00fb\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
-        buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
-        buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23\t\23")
-        buf.write("\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31")
-        buf.write("\t\31\4\32\t\32\4\33\t\33\4\34\t\34\3\2\7\2:\n\2\f\2\16")
-        buf.write("\2=\13\2\3\2\3\2\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\5")
-        buf.write("\3J\n\3\3\4\3\4\5\4N\n\4\3\5\3\5\7\5R\n\5\f\5\16\5U\13")
-        buf.write("\5\3\5\3\5\3\6\3\6\3\6\3\6\5\6]\n\6\3\6\3\6\3\6\3\7\3")
-        buf.write("\7\3\7\7\7e\n\7\f\7\16\7h\13\7\3\b\3\b\3\b\3\b\3\b\7\b")
-        buf.write("o\n\b\f\b\16\br\13\b\3\b\3\b\3\t\3\t\3\t\5\ty\n\t\3\t")
-        buf.write("\3\t\3\n\3\n\3\n\3\n\3\n\3\n\3\n\7\n\u0084\n\n\f\n\16")
-        buf.write("\n\u0087\13\n\3\n\3\n\5\n\u008b\n\n\3\13\3\13\3\13\3\13")
-        buf.write("\3\13\5\13\u0092\n\13\3\f\3\f\3\f\3\f\3\r\3\r\3\r\3\r")
-        buf.write("\3\r\3\r\3\16\3\16\5\16\u00a0\n\16\3\17\3\17\3\17\3\17")
-        buf.write("\3\20\3\20\5\20\u00a8\n\20\3\21\3\21\3\22\3\22\3\22\7")
-        buf.write("\22\u00af\n\22\f\22\16\22\u00b2\13\22\3\23\3\23\3\23\7")
-        buf.write("\23\u00b7\n\23\f\23\16\23\u00ba\13\23\3\24\3\24\3\24\7")
-        buf.write("\24\u00bf\n\24\f\24\16\24\u00c2\13\24\3\25\3\25\3\25\7")
-        buf.write("\25\u00c7\n\25\f\25\16\25\u00ca\13\25\3\26\3\26\3\26\7")
-        buf.write("\26\u00cf\n\26\f\26\16\26\u00d2\13\26\3\27\3\27\3\27\7")
-        buf.write("\27\u00d7\n\27\f\27\16\27\u00da\13\27\3\30\3\30\3\30\5")
-        buf.write("\30\u00df\n\30\3\31\3\31\3\31\3\31\3\31\3\31\3\31\5\31")
-        buf.write("\u00e8\n\31\3\32\3\32\3\32\5\32\u00ed\n\32\3\32\3\32\3")
-        buf.write("\33\3\33\3\33\7\33\u00f4\n\33\f\33\16\33\u00f7\13\33\3")
-        buf.write("\34\3\34\3\34\2\2\35\2\4\6\b\n\f\16\20\22\24\26\30\32")
-        buf.write("\34\36 \"$&(*,.\60\62\64\66\2\b\3\2\23\24\3\2\25\30\3")
-        buf.write("\2\32\33\3\2\34\36\4\2\17\17\33\33\4\2\20\22\'(\u00ff")
-        buf.write("\2;\3\2\2\2\4I\3\2\2\2\6M\3\2\2\2\bO\3\2\2\2\nX\3\2\2")
-        buf.write("\2\fa\3\2\2\2\16i\3\2\2\2\20u\3\2\2\2\22|\3\2\2\2\24\u0091")
-        buf.write("\3\2\2\2\26\u0093\3\2\2\2\30\u0097\3\2\2\2\32\u009d\3")
-        buf.write("\2\2\2\34\u00a1\3\2\2\2\36\u00a7\3\2\2\2 \u00a9\3\2\2")
-        buf.write("\2\"\u00ab\3\2\2\2$\u00b3\3\2\2\2&\u00bb\3\2\2\2(\u00c3")
-        buf.write("\3\2\2\2*\u00cb\3\2\2\2,\u00d3\3\2\2\2.\u00de\3\2\2\2")
-        buf.write("\60\u00e7\3\2\2\2\62\u00e9\3\2\2\2\64\u00f0\3\2\2\2\66")
-        buf.write("\u00f8\3\2\2\28:\5\4\3\298\3\2\2\2:=\3\2\2\2;9\3\2\2\2")
-        buf.write(";<\3\2\2\2<>\3\2\2\2=;\3\2\2\2>?\7\2\2\3?\3\3\2\2\2@J")
-        buf.write("\5\n\6\2AJ\5\6\4\2BJ\5\22\n\2CJ\5\26\f\2DJ\5\30\r\2EJ")
-        buf.write("\5\32\16\2FJ\5\34\17\2GJ\5 \21\2HJ\5\b\5\2I@\3\2\2\2I")
-        buf.write("A\3\2\2\2IB\3\2\2\2IC\3\2\2\2ID\3\2\2\2IE\3\2\2\2IF\3")
-        buf.write("\2\2\2IG\3\2\2\2IH\3\2\2\2J\5\3\2\2\2KN\5\16\b\2LN\5\20")
-        buf.write("\t\2MK\3\2\2\2ML\3\2\2\2N\7\3\2\2\2OS\7\"\2\2PR\5\4\3")
-        buf.write("\2QP\3\2\2\2RU\3\2\2\2SQ\3\2\2\2ST\3\2\2\2TV\3\2\2\2U")
-        buf.write("S\3\2\2\2VW\7#\2\2W\t\3\2\2\2XY\7\3\2\2YZ\7)\2\2Z\\\7")
-        buf.write(" \2\2[]\5\f\7\2\\[\3\2\2\2\\]\3\2\2\2]^\3\2\2\2^_\7!\2")
-        buf.write("\2_`\5\b\5\2`\13\3\2\2\2af\7)\2\2bc\7\37\2\2ce\7)\2\2")
-        buf.write("db\3\2\2\2eh\3\2\2\2fd\3\2\2\2fg\3\2\2\2g\r\3\2\2\2hf")
-        buf.write("\3\2\2\2ij\7\13\2\2jk\7 \2\2kp\5 \21\2lm\7\37\2\2mo\5")
-        buf.write(" \21\2nl\3\2\2\2or\3\2\2\2pn\3\2\2\2pq\3\2\2\2qs\3\2\2")
-        buf.write("\2rp\3\2\2\2st\7!\2\2t\17\3\2\2\2uv\7\f\2\2vx\7 \2\2w")
-        buf.write("y\5 \21\2xw\3\2\2\2xy\3\2\2\2yz\3\2\2\2z{\7!\2\2{\21\3")
-        buf.write("\2\2\2|}\7\4\2\2}~\5\24\13\2~\u0085\5\b\5\2\177\u0080")
-        buf.write("\7\5\2\2\u0080\u0081\5\24\13\2\u0081\u0082\5\b\5\2\u0082")
-        buf.write("\u0084\3\2\2\2\u0083\177\3\2\2\2\u0084\u0087\3\2\2\2\u0085")
-        buf.write("\u0083\3\2\2\2\u0085\u0086\3\2\2\2\u0086\u008a\3\2\2\2")
-        buf.write("\u0087\u0085\3\2\2\2\u0088\u0089\7\6\2\2\u0089\u008b\5")
-        buf.write("\b\5\2\u008a\u0088\3\2\2\2\u008a\u008b\3\2\2\2\u008b\23")
-        buf.write("\3\2\2\2\u008c\u008d\7 \2\2\u008d\u008e\5 \21\2\u008e")
-        buf.write("\u008f\7!\2\2\u008f\u0092\3\2\2\2\u0090\u0092\5 \21\2")
-        buf.write("\u0091\u008c\3\2\2\2\u0091\u0090\3\2\2\2\u0092\25\3\2")
-        buf.write("\2\2\u0093\u0094\7\7\2\2\u0094\u0095\5\24\13\2\u0095\u0096")
-        buf.write("\5\b\5\2\u0096\27\3\2\2\2\u0097\u0098\7\b\2\2\u0098\u0099")
-        buf.write("\7)\2\2\u0099\u009a\7\t\2\2\u009a\u009b\5 \21\2\u009b")
-        buf.write("\u009c\5\b\5\2\u009c\31\3\2\2\2\u009d\u009f\7\n\2\2\u009e")
-        buf.write("\u00a0\5 \21\2\u009f\u009e\3\2\2\2\u009f\u00a0\3\2\2\2")
-        buf.write("\u00a0\33\3\2\2\2\u00a1\u00a2\7)\2\2\u00a2\u00a3\7\31")
-        buf.write("\2\2\u00a3\u00a4\5\36\20\2\u00a4\35\3\2\2\2\u00a5\u00a8")
-        buf.write("\5 \21\2\u00a6\u00a8\5\6\4\2\u00a7\u00a5\3\2\2\2\u00a7")
-        buf.write("\u00a6\3\2\2\2\u00a8\37\3\2\2\2\u00a9\u00aa\5\"\22\2\u00aa")
-        buf.write("!\3\2\2\2\u00ab\u00b0\5$\23\2\u00ac\u00ad\7\16\2\2\u00ad")
-        buf.write("\u00af\5$\23\2\u00ae\u00ac\3\2\2\2\u00af\u00b2\3\2\2\2")
-        buf.write("\u00b0\u00ae\3\2\2\2\u00b0\u00b1\3\2\2\2\u00b1#\3\2\2")
-        buf.write("\2\u00b2\u00b0\3\2\2\2\u00b3\u00b8\5&\24\2\u00b4\u00b5")
-        buf.write("\7\r\2\2\u00b5\u00b7\5&\24\2\u00b6\u00b4\3\2\2\2\u00b7")
-        buf.write("\u00ba\3\2\2\2\u00b8\u00b6\3\2\2\2\u00b8\u00b9\3\2\2\2")
-        buf.write("\u00b9%\3\2\2\2\u00ba\u00b8\3\2\2\2\u00bb\u00c0\5(\25")
-        buf.write("\2\u00bc\u00bd\t\2\2\2\u00bd\u00bf\5(\25\2\u00be\u00bc")
-        buf.write("\3\2\2\2\u00bf\u00c2\3\2\2\2\u00c0\u00be\3\2\2\2\u00c0")
-        buf.write("\u00c1\3\2\2\2\u00c1\'\3\2\2\2\u00c2\u00c0\3\2\2\2\u00c3")
-        buf.write("\u00c8\5*\26\2\u00c4\u00c5\t\3\2\2\u00c5\u00c7\5*\26\2")
-        buf.write("\u00c6\u00c4\3\2\2\2\u00c7\u00ca\3\2\2\2\u00c8\u00c6\3")
-        buf.write("\2\2\2\u00c8\u00c9\3\2\2\2\u00c9)\3\2\2\2\u00ca\u00c8")
-        buf.write("\3\2\2\2\u00cb\u00d0\5,\27\2\u00cc\u00cd\t\4\2\2\u00cd")
-        buf.write("\u00cf\5,\27\2\u00ce\u00cc\3\2\2\2\u00cf\u00d2\3\2\2\2")
-        buf.write("\u00d0\u00ce\3\2\2\2\u00d0\u00d1\3\2\2\2\u00d1+\3\2\2")
-        buf.write("\2\u00d2\u00d0\3\2\2\2\u00d3\u00d8\5.\30\2\u00d4\u00d5")
-        buf.write("\t\5\2\2\u00d5\u00d7\5.\30\2\u00d6\u00d4\3\2\2\2\u00d7")
-        buf.write("\u00da\3\2\2\2\u00d8\u00d6\3\2\2\2\u00d8\u00d9\3\2\2\2")
-        buf.write("\u00d9-\3\2\2\2\u00da\u00d8\3\2\2\2\u00db\u00dc\t\6\2")
-        buf.write("\2\u00dc\u00df\5.\30\2\u00dd\u00df\5\60\31\2\u00de\u00db")
-        buf.write("\3\2\2\2\u00de\u00dd\3\2\2\2\u00df/\3\2\2\2\u00e0\u00e8")
-        buf.write("\5\66\34\2\u00e1\u00e8\7)\2\2\u00e2\u00e8\5\62\32\2\u00e3")
-        buf.write("\u00e4\7 \2\2\u00e4\u00e5\5 \21\2\u00e5\u00e6\7!\2\2\u00e6")
-        buf.write("\u00e8\3\2\2\2\u00e7\u00e0\3\2\2\2\u00e7\u00e1\3\2\2\2")
-        buf.write("\u00e7\u00e2\3\2\2\2\u00e7\u00e3\3\2\2\2\u00e8\61\3\2")
-        buf.write("\2\2\u00e9\u00ea\7)\2\2\u00ea\u00ec\7 \2\2\u00eb\u00ed")
-        buf.write("\5\64\33\2\u00ec\u00eb\3\2\2\2\u00ec\u00ed\3\2\2\2\u00ed")
-        buf.write("\u00ee\3\2\2\2\u00ee\u00ef\7!\2\2\u00ef\63\3\2\2\2\u00f0")
-        buf.write("\u00f5\5 \21\2\u00f1\u00f2\7\37\2\2\u00f2\u00f4\5 \21")
-        buf.write("\2\u00f3\u00f1\3\2\2\2\u00f4\u00f7\3\2\2\2\u00f5\u00f3")
-        buf.write("\3\2\2\2\u00f5\u00f6\3\2\2\2\u00f6\65\3\2\2\2\u00f7\u00f5")
-        buf.write("\3\2\2\2\u00f8\u00f9\t\7\2\2\u00f9\67\3\2\2\2\31;IMS\\")
-        buf.write("fpx\u0085\u008a\u0091\u009f\u00a7\u00b0\u00b8\u00c0\u00c8")
-        buf.write("\u00d0\u00d8\u00de\u00e7\u00ec\u00f5")
-        return buf.getvalue()
-
+    return [
+        4,1,43,249,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
+        2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,
+        7,20,2,21,7,21,2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,2,26,7,26,
+        1,0,5,0,56,8,0,10,0,12,0,59,9,0,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,
+        1,1,1,1,1,1,3,1,72,8,1,1,2,1,2,3,2,76,8,2,1,3,1,3,5,3,80,8,3,10,
+        3,12,3,83,9,3,1,3,1,3,1,4,1,4,1,4,1,4,3,4,91,8,4,1,4,1,4,1,4,1,5,
+        1,5,1,5,5,5,99,8,5,10,5,12,5,102,9,5,1,6,1,6,1,6,1,6,1,6,5,6,109,
+        8,6,10,6,12,6,112,9,6,1,6,1,6,1,7,1,7,1,7,3,7,119,8,7,1,7,1,7,1,
+        8,1,8,1,8,1,8,1,8,1,8,1,8,5,8,130,8,8,10,8,12,8,133,9,8,1,8,1,8,
+        3,8,137,8,8,1,9,1,9,1,9,1,9,1,9,3,9,144,8,9,1,10,1,10,1,10,1,10,
+        1,11,1,11,1,11,1,11,1,11,1,11,1,12,1,12,3,12,158,8,12,1,13,1,13,
+        1,13,1,13,1,14,1,14,3,14,166,8,14,1,15,1,15,1,16,1,16,1,16,5,16,
+        173,8,16,10,16,12,16,176,9,16,1,17,1,17,1,17,5,17,181,8,17,10,17,
+        12,17,184,9,17,1,18,1,18,1,18,5,18,189,8,18,10,18,12,18,192,9,18,
+        1,19,1,19,1,19,5,19,197,8,19,10,19,12,19,200,9,19,1,20,1,20,1,20,
+        5,20,205,8,20,10,20,12,20,208,9,20,1,21,1,21,1,21,5,21,213,8,21,
+        10,21,12,21,216,9,21,1,22,1,22,1,22,3,22,221,8,22,1,23,1,23,1,23,
+        1,23,1,23,1,23,1,23,3,23,230,8,23,1,24,1,24,1,24,3,24,235,8,24,1,
+        24,1,24,1,25,1,25,1,25,5,25,242,8,25,10,25,12,25,245,9,25,1,26,1,
+        26,1,26,0,0,27,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,
+        36,38,40,42,44,46,48,50,52,0,6,1,0,17,18,1,0,19,22,1,0,24,25,1,0,
+        26,28,2,0,13,13,25,25,2,0,14,16,37,38,253,0,57,1,0,0,0,2,71,1,0,
+        0,0,4,75,1,0,0,0,6,77,1,0,0,0,8,86,1,0,0,0,10,95,1,0,0,0,12,103,
+        1,0,0,0,14,115,1,0,0,0,16,122,1,0,0,0,18,143,1,0,0,0,20,145,1,0,
+        0,0,22,149,1,0,0,0,24,155,1,0,0,0,26,159,1,0,0,0,28,165,1,0,0,0,
+        30,167,1,0,0,0,32,169,1,0,0,0,34,177,1,0,0,0,36,185,1,0,0,0,38,193,
+        1,0,0,0,40,201,1,0,0,0,42,209,1,0,0,0,44,220,1,0,0,0,46,229,1,0,
+        0,0,48,231,1,0,0,0,50,238,1,0,0,0,52,246,1,0,0,0,54,56,3,2,1,0,55,
+        54,1,0,0,0,56,59,1,0,0,0,57,55,1,0,0,0,57,58,1,0,0,0,58,60,1,0,0,
+        0,59,57,1,0,0,0,60,61,5,0,0,1,61,1,1,0,0,0,62,72,3,8,4,0,63,72,3,
+        4,2,0,64,72,3,16,8,0,65,72,3,20,10,0,66,72,3,22,11,0,67,72,3,24,
+        12,0,68,72,3,26,13,0,69,72,3,30,15,0,70,72,3,6,3,0,71,62,1,0,0,0,
+        71,63,1,0,0,0,71,64,1,0,0,0,71,65,1,0,0,0,71,66,1,0,0,0,71,67,1,
+        0,0,0,71,68,1,0,0,0,71,69,1,0,0,0,71,70,1,0,0,0,72,3,1,0,0,0,73,
+        76,3,12,6,0,74,76,3,14,7,0,75,73,1,0,0,0,75,74,1,0,0,0,76,5,1,0,
+        0,0,77,81,5,32,0,0,78,80,3,2,1,0,79,78,1,0,0,0,80,83,1,0,0,0,81,
+        79,1,0,0,0,81,82,1,0,0,0,82,84,1,0,0,0,83,81,1,0,0,0,84,85,5,33,
+        0,0,85,7,1,0,0,0,86,87,5,1,0,0,87,88,5,39,0,0,88,90,5,30,0,0,89,
+        91,3,10,5,0,90,89,1,0,0,0,90,91,1,0,0,0,91,92,1,0,0,0,92,93,5,31,
+        0,0,93,94,3,6,3,0,94,9,1,0,0,0,95,100,5,39,0,0,96,97,5,29,0,0,97,
+        99,5,39,0,0,98,96,1,0,0,0,99,102,1,0,0,0,100,98,1,0,0,0,100,101,
+        1,0,0,0,101,11,1,0,0,0,102,100,1,0,0,0,103,104,5,9,0,0,104,105,5,
+        30,0,0,105,110,3,30,15,0,106,107,5,29,0,0,107,109,3,30,15,0,108,
+        106,1,0,0,0,109,112,1,0,0,0,110,108,1,0,0,0,110,111,1,0,0,0,111,
+        113,1,0,0,0,112,110,1,0,0,0,113,114,5,31,0,0,114,13,1,0,0,0,115,
+        116,5,10,0,0,116,118,5,30,0,0,117,119,3,30,15,0,118,117,1,0,0,0,
+        118,119,1,0,0,0,119,120,1,0,0,0,120,121,5,31,0,0,121,15,1,0,0,0,
+        122,123,5,2,0,0,123,124,3,18,9,0,124,131,3,6,3,0,125,126,5,3,0,0,
+        126,127,3,18,9,0,127,128,3,6,3,0,128,130,1,0,0,0,129,125,1,0,0,0,
+        130,133,1,0,0,0,131,129,1,0,0,0,131,132,1,0,0,0,132,136,1,0,0,0,
+        133,131,1,0,0,0,134,135,5,4,0,0,135,137,3,6,3,0,136,134,1,0,0,0,
+        136,137,1,0,0,0,137,17,1,0,0,0,138,139,5,30,0,0,139,140,3,30,15,
+        0,140,141,5,31,0,0,141,144,1,0,0,0,142,144,3,30,15,0,143,138,1,0,
+        0,0,143,142,1,0,0,0,144,19,1,0,0,0,145,146,5,5,0,0,146,147,3,18,
+        9,0,147,148,3,6,3,0,148,21,1,0,0,0,149,150,5,6,0,0,150,151,5,39,
+        0,0,151,152,5,7,0,0,152,153,3,30,15,0,153,154,3,6,3,0,154,23,1,0,
+        0,0,155,157,5,8,0,0,156,158,3,30,15,0,157,156,1,0,0,0,157,158,1,
+        0,0,0,158,25,1,0,0,0,159,160,5,39,0,0,160,161,5,23,0,0,161,162,3,
+        28,14,0,162,27,1,0,0,0,163,166,3,30,15,0,164,166,3,4,2,0,165,163,
+        1,0,0,0,165,164,1,0,0,0,166,29,1,0,0,0,167,168,3,32,16,0,168,31,
+        1,0,0,0,169,174,3,34,17,0,170,171,5,12,0,0,171,173,3,34,17,0,172,
+        170,1,0,0,0,173,176,1,0,0,0,174,172,1,0,0,0,174,175,1,0,0,0,175,
+        33,1,0,0,0,176,174,1,0,0,0,177,182,3,36,18,0,178,179,5,11,0,0,179,
+        181,3,36,18,0,180,178,1,0,0,0,181,184,1,0,0,0,182,180,1,0,0,0,182,
+        183,1,0,0,0,183,35,1,0,0,0,184,182,1,0,0,0,185,190,3,38,19,0,186,
+        187,7,0,0,0,187,189,3,38,19,0,188,186,1,0,0,0,189,192,1,0,0,0,190,
+        188,1,0,0,0,190,191,1,0,0,0,191,37,1,0,0,0,192,190,1,0,0,0,193,198,
+        3,40,20,0,194,195,7,1,0,0,195,197,3,40,20,0,196,194,1,0,0,0,197,
+        200,1,0,0,0,198,196,1,0,0,0,198,199,1,0,0,0,199,39,1,0,0,0,200,198,
+        1,0,0,0,201,206,3,42,21,0,202,203,7,2,0,0,203,205,3,42,21,0,204,
+        202,1,0,0,0,205,208,1,0,0,0,206,204,1,0,0,0,206,207,1,0,0,0,207,
+        41,1,0,0,0,208,206,1,0,0,0,209,214,3,44,22,0,210,211,7,3,0,0,211,
+        213,3,44,22,0,212,210,1,0,0,0,213,216,1,0,0,0,214,212,1,0,0,0,214,
+        215,1,0,0,0,215,43,1,0,0,0,216,214,1,0,0,0,217,218,7,4,0,0,218,221,
+        3,44,22,0,219,221,3,46,23,0,220,217,1,0,0,0,220,219,1,0,0,0,221,
+        45,1,0,0,0,222,230,3,52,26,0,223,230,5,39,0,0,224,230,3,48,24,0,
+        225,226,5,30,0,0,226,227,3,30,15,0,227,228,5,31,0,0,228,230,1,0,
+        0,0,229,222,1,0,0,0,229,223,1,0,0,0,229,224,1,0,0,0,229,225,1,0,
+        0,0,230,47,1,0,0,0,231,232,5,39,0,0,232,234,5,30,0,0,233,235,3,50,
+        25,0,234,233,1,0,0,0,234,235,1,0,0,0,235,236,1,0,0,0,236,237,5,31,
+        0,0,237,49,1,0,0,0,238,243,3,30,15,0,239,240,5,29,0,0,240,242,3,
+        30,15,0,241,239,1,0,0,0,242,245,1,0,0,0,243,241,1,0,0,0,243,244,
+        1,0,0,0,244,51,1,0,0,0,245,243,1,0,0,0,246,247,7,5,0,0,247,53,1,
+        0,0,0,23,57,71,75,81,90,100,110,118,131,136,143,157,165,174,182,
+        190,198,206,214,220,229,234,243
+    ]
 
 class PyLikeParser ( Parser ):
 
@@ -219,15 +205,17 @@ class PyLikeParser ( Parser ):
     COMMENT=42
     WS=43
 
-    def __init__(self, input:TokenStream):
-        super().__init__(input)
-        self.checkVersion("4.5.1")
+    def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
+        super().__init__(input, output)
+        self.checkVersion("4.13.1")
         self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
         self._predicates = None
 
 
 
+
     class ProgramaContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -267,7 +255,7 @@ class PyLikeParser ( Parser ):
             self.state = 57
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PyLikeParser.DEF) | (1 << PyLikeParser.IF) | (1 << PyLikeParser.WHILE) | (1 << PyLikeParser.FOR) | (1 << PyLikeParser.RETURN) | (1 << PyLikeParser.PRINT) | (1 << PyLikeParser.INPUT) | (1 << PyLikeParser.NOT) | (1 << PyLikeParser.TRUE) | (1 << PyLikeParser.FALSE) | (1 << PyLikeParser.NONE) | (1 << PyLikeParser.MINUS) | (1 << PyLikeParser.LPAREN) | (1 << PyLikeParser.LBRACE) | (1 << PyLikeParser.NUMBER) | (1 << PyLikeParser.STRING) | (1 << PyLikeParser.ID))) != 0):
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 967475062630) != 0):
                 self.state = 54
                 self.declaracao()
                 self.state = 59
@@ -284,7 +272,9 @@ class PyLikeParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class DeclaracaoContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -346,6 +336,7 @@ class PyLikeParser ( Parser ):
         self.enterRule(localctx, 2, self.RULE_declaracao)
         try:
             self.state = 71
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,1,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -410,7 +401,9 @@ class PyLikeParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class ComandosContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -444,17 +437,18 @@ class PyLikeParser ( Parser ):
         self.enterRule(localctx, 4, self.RULE_comandos)
         try:
             self.state = 75
+            self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [PyLikeParser.PRINT]:
+            if token in [9]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 73
                 self.escreva()
-
-            elif token in [PyLikeParser.INPUT]:
+                pass
+            elif token in [10]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 74
                 self.leia()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -466,7 +460,9 @@ class PyLikeParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class BlocoContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -511,7 +507,7 @@ class PyLikeParser ( Parser ):
             self.state = 81
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PyLikeParser.DEF) | (1 << PyLikeParser.IF) | (1 << PyLikeParser.WHILE) | (1 << PyLikeParser.FOR) | (1 << PyLikeParser.RETURN) | (1 << PyLikeParser.PRINT) | (1 << PyLikeParser.INPUT) | (1 << PyLikeParser.NOT) | (1 << PyLikeParser.TRUE) | (1 << PyLikeParser.FALSE) | (1 << PyLikeParser.NONE) | (1 << PyLikeParser.MINUS) | (1 << PyLikeParser.LPAREN) | (1 << PyLikeParser.LBRACE) | (1 << PyLikeParser.NUMBER) | (1 << PyLikeParser.STRING) | (1 << PyLikeParser.ID))) != 0):
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 967475062630) != 0):
                 self.state = 78
                 self.declaracao()
                 self.state = 83
@@ -528,7 +524,9 @@ class PyLikeParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class DeclaracaoFuncaoContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -582,8 +580,9 @@ class PyLikeParser ( Parser ):
             self.state = 88
             self.match(PyLikeParser.LPAREN)
             self.state = 90
+            self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==PyLikeParser.ID:
+            if _la==39:
                 self.state = 89
                 self.listaParametros()
 
@@ -600,7 +599,9 @@ class PyLikeParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class ListaParametrosContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -644,7 +645,7 @@ class PyLikeParser ( Parser ):
             self.state = 100
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==PyLikeParser.COMMA:
+            while _la==29:
                 self.state = 96
                 self.match(PyLikeParser.COMMA)
                 self.state = 97
@@ -661,7 +662,9 @@ class PyLikeParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class EscrevaContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -719,7 +722,7 @@ class PyLikeParser ( Parser ):
             self.state = 110
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==PyLikeParser.COMMA:
+            while _la==29:
                 self.state = 106
                 self.match(PyLikeParser.COMMA)
                 self.state = 107
@@ -738,7 +741,9 @@ class PyLikeParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class LeiaContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -783,8 +788,9 @@ class PyLikeParser ( Parser ):
             self.state = 116
             self.match(PyLikeParser.LPAREN)
             self.state = 118
+            self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PyLikeParser.NOT) | (1 << PyLikeParser.TRUE) | (1 << PyLikeParser.FALSE) | (1 << PyLikeParser.NONE) | (1 << PyLikeParser.MINUS) | (1 << PyLikeParser.LPAREN) | (1 << PyLikeParser.NUMBER) | (1 << PyLikeParser.STRING) | (1 << PyLikeParser.ID))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 963180093440) != 0):
                 self.state = 117
                 self.expressao()
 
@@ -799,7 +805,9 @@ class PyLikeParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class DeclaracaoSeContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -861,7 +869,7 @@ class PyLikeParser ( Parser ):
             self.state = 131
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==PyLikeParser.ELIF:
+            while _la==3:
                 self.state = 125
                 self.match(PyLikeParser.ELIF)
                 self.state = 126
@@ -873,8 +881,9 @@ class PyLikeParser ( Parser ):
                 _la = self._input.LA(1)
 
             self.state = 136
+            self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==PyLikeParser.ELSE:
+            if _la==4:
                 self.state = 134
                 self.match(PyLikeParser.ELSE)
                 self.state = 135
@@ -889,7 +898,9 @@ class PyLikeParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class CondicaoContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -925,6 +936,7 @@ class PyLikeParser ( Parser ):
         self.enterRule(localctx, 18, self.RULE_condicao)
         try:
             self.state = 143
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,10,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -951,7 +963,9 @@ class PyLikeParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class DeclaracaoEnquantoContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1002,7 +1016,9 @@ class PyLikeParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class DeclaracaoParaContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1063,7 +1079,9 @@ class PyLikeParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class DeclaracaoRetornoContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1099,6 +1117,7 @@ class PyLikeParser ( Parser ):
             self.state = 155
             self.match(PyLikeParser.RETURN)
             self.state = 157
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,11,self._ctx)
             if la_ == 1:
                 self.state = 156
@@ -1113,7 +1132,9 @@ class PyLikeParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class AtribuicaoContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1163,7 +1184,9 @@ class PyLikeParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class AtribuivelContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1197,17 +1220,18 @@ class PyLikeParser ( Parser ):
         self.enterRule(localctx, 28, self.RULE_atribuivel)
         try:
             self.state = 165
+            self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [PyLikeParser.NOT, PyLikeParser.TRUE, PyLikeParser.FALSE, PyLikeParser.NONE, PyLikeParser.MINUS, PyLikeParser.LPAREN, PyLikeParser.NUMBER, PyLikeParser.STRING, PyLikeParser.ID]:
+            if token in [13, 14, 15, 16, 25, 30, 37, 38, 39]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 163
                 self.expressao()
-
-            elif token in [PyLikeParser.PRINT, PyLikeParser.INPUT]:
+                pass
+            elif token in [9, 10]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 164
                 self.comandos()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -1219,7 +1243,9 @@ class PyLikeParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class ExpressaoContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1259,7 +1285,9 @@ class PyLikeParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class LogicoOuContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1304,7 +1332,7 @@ class PyLikeParser ( Parser ):
             self.state = 174
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==PyLikeParser.OR:
+            while _la==12:
                 self.state = 170
                 self.match(PyLikeParser.OR)
                 self.state = 171
@@ -1321,7 +1349,9 @@ class PyLikeParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class LogicoEContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1366,7 +1396,7 @@ class PyLikeParser ( Parser ):
             self.state = 182
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==PyLikeParser.AND:
+            while _la==11:
                 self.state = 178
                 self.match(PyLikeParser.AND)
                 self.state = 179
@@ -1383,7 +1413,9 @@ class PyLikeParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class IgualdadeContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1434,12 +1466,13 @@ class PyLikeParser ( Parser ):
             self.state = 190
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==PyLikeParser.EQ or _la==PyLikeParser.NEQ:
+            while _la==17 or _la==18:
                 self.state = 186
                 _la = self._input.LA(1)
-                if not(_la==PyLikeParser.EQ or _la==PyLikeParser.NEQ):
+                if not(_la==17 or _la==18):
                     self._errHandler.recoverInline(self)
                 else:
+                    self._errHandler.reportMatch(self)
                     self.consume()
                 self.state = 187
                 self.comparacao()
@@ -1455,7 +1488,9 @@ class PyLikeParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class ComparacaoContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1518,12 +1553,13 @@ class PyLikeParser ( Parser ):
             self.state = 198
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PyLikeParser.LTE) | (1 << PyLikeParser.GTE) | (1 << PyLikeParser.LT) | (1 << PyLikeParser.GT))) != 0):
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 7864320) != 0):
                 self.state = 194
                 _la = self._input.LA(1)
-                if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PyLikeParser.LTE) | (1 << PyLikeParser.GTE) | (1 << PyLikeParser.LT) | (1 << PyLikeParser.GT))) != 0)):
+                if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 7864320) != 0)):
                     self._errHandler.recoverInline(self)
                 else:
+                    self._errHandler.reportMatch(self)
                     self.consume()
                 self.state = 195
                 self.adicao()
@@ -1539,7 +1575,9 @@ class PyLikeParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class AdicaoContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1594,9 +1632,10 @@ class PyLikeParser ( Parser ):
                 if _alt==1:
                     self.state = 202
                     _la = self._input.LA(1)
-                    if not(_la==PyLikeParser.PLUS or _la==PyLikeParser.MINUS):
+                    if not(_la==24 or _la==25):
                         self._errHandler.recoverInline(self)
                     else:
+                        self._errHandler.reportMatch(self)
                         self.consume()
                     self.state = 203
                     self.multiplicacao() 
@@ -1612,7 +1651,9 @@ class PyLikeParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class MultiplicacaoContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1669,12 +1710,13 @@ class PyLikeParser ( Parser ):
             self.state = 214
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PyLikeParser.MUL) | (1 << PyLikeParser.DIV) | (1 << PyLikeParser.MOD))) != 0):
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 469762048) != 0):
                 self.state = 210
                 _la = self._input.LA(1)
-                if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PyLikeParser.MUL) | (1 << PyLikeParser.DIV) | (1 << PyLikeParser.MOD))) != 0)):
+                if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 469762048) != 0)):
                     self._errHandler.recoverInline(self)
                 else:
+                    self._errHandler.reportMatch(self)
                     self.consume()
                 self.state = 211
                 self.unario()
@@ -1690,7 +1732,9 @@ class PyLikeParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class UnarioContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1731,23 +1775,25 @@ class PyLikeParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.state = 220
+            self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [PyLikeParser.NOT, PyLikeParser.MINUS]:
+            if token in [13, 25]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 217
                 _la = self._input.LA(1)
-                if not(_la==PyLikeParser.NOT or _la==PyLikeParser.MINUS):
+                if not(_la==13 or _la==25):
                     self._errHandler.recoverInline(self)
                 else:
+                    self._errHandler.reportMatch(self)
                     self.consume()
                 self.state = 218
                 self.unario()
-
-            elif token in [PyLikeParser.TRUE, PyLikeParser.FALSE, PyLikeParser.NONE, PyLikeParser.LPAREN, PyLikeParser.NUMBER, PyLikeParser.STRING, PyLikeParser.ID]:
+                pass
+            elif token in [14, 15, 16, 30, 37, 38, 39]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 219
                 self.primario()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -1759,7 +1805,9 @@ class PyLikeParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class PrimarioContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1806,6 +1854,7 @@ class PyLikeParser ( Parser ):
         self.enterRule(localctx, 46, self.RULE_primario)
         try:
             self.state = 229
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,20,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -1844,7 +1893,9 @@ class PyLikeParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class ChamadaFuncaoContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1889,8 +1940,9 @@ class PyLikeParser ( Parser ):
             self.state = 232
             self.match(PyLikeParser.LPAREN)
             self.state = 234
+            self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PyLikeParser.NOT) | (1 << PyLikeParser.TRUE) | (1 << PyLikeParser.FALSE) | (1 << PyLikeParser.NONE) | (1 << PyLikeParser.MINUS) | (1 << PyLikeParser.LPAREN) | (1 << PyLikeParser.NUMBER) | (1 << PyLikeParser.STRING) | (1 << PyLikeParser.ID))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 963180093440) != 0):
                 self.state = 233
                 self.listaArgumentos()
 
@@ -1905,7 +1957,9 @@ class PyLikeParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class ListaArgumentosContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1950,7 +2004,7 @@ class PyLikeParser ( Parser ):
             self.state = 243
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==PyLikeParser.COMMA:
+            while _la==29:
                 self.state = 239
                 self.match(PyLikeParser.COMMA)
                 self.state = 240
@@ -1967,7 +2021,9 @@ class PyLikeParser ( Parser ):
             self.exitRule()
         return localctx
 
+
     class LiteralContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2011,9 +2067,10 @@ class PyLikeParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 246
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PyLikeParser.TRUE) | (1 << PyLikeParser.FALSE) | (1 << PyLikeParser.NONE) | (1 << PyLikeParser.NUMBER) | (1 << PyLikeParser.STRING))) != 0)):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 412316975104) != 0)):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re

@@ -1,6 +1,6 @@
-# Generated from PyLike.g4 by ANTLR 4.5.1
+# Generated from PyLike.g4 by ANTLR 4.13.1
 from antlr4 import *
-if __name__ is not None and "." in __name__:
+if "." in __name__:
     from .PyLikeParser import PyLikeParser
 else:
     from PyLikeParser import PyLikeParser
@@ -251,3 +251,5 @@ class PyLikeListener(ParseTreeListener):
         pass
 
 
+
+del PyLikeParser
