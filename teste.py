@@ -3,7 +3,13 @@ from PyLikeLexer import PyLikeLexer
 from PyLikeParser import PyLikeParser
 from criar_dot import antlr_tree_to_dot
 
-code = 'print("Olá, PyLike")'
+try:
+    with open("teste.txt", "r") as file:
+        conteudo = file.read()
+except:
+    conteudo = 'print("Olá, PyLike")'
+    
+code = conteudo
 input_stream = InputStream(code)
 lexer = PyLikeLexer(input_stream)
 tokens = CommonTokenStream(lexer)
