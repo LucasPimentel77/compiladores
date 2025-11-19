@@ -1,14 +1,16 @@
 from antlr4 import InputStream, CommonTokenStream
-from PyLikeLexer import PyLikeLexer
-from PyLikeParser import PyLikeParser
-from criar_dot import antlr_tree_to_dot
+from generated import PyLikeLexer
+from generated.PyLikeParser import PyLikeParser
+from tools.criar_dot import antlr_tree_to_dot
+
+NOME_DO_ARQUIVO = "teste.txt"
 
 try:
-    with open("teste.txt", "r") as file:
+    with open(f"../tests/{NOME_DO_ARQUIVO}", "r") as file:
         conteudo = file.read()
-except:
+except FileNotFoundError:
     conteudo = 'print("Olá, PyLike")'
-    
+
 code = conteudo
 input_stream = InputStream(code)
 lexer = PyLikeLexer(input_stream)
@@ -18,5 +20,5 @@ tree = parser.programa()
 
 dot_str = antlr_tree_to_dot(tree, parser.ruleNames)
 
-with open("output.dot", "w") as f:
+with open(f"../output/{NOME_DO_ARQUIVO}.dot", "w") as f:
     f.write(dot_str)

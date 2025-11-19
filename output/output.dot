@@ -31,7 +31,7 @@ node14 [label="primario"];
 node13 -> node14;
 node15 [label="literal"];
 node14 -> node15;
-node16 [label="\"Olï¿½, PyLike\""];
+node16 [label="\"Olá, PyLike\""];
 node15 -> node16;
 node17 [label=")"];
 node3 -> node17;
