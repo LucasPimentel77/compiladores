@@ -26,7 +26,9 @@ comandos
 bloco: LBRACE declaracao* RBRACE ;
 
 declaracaoFuncao: DEF ID LPAREN listaParametros? RPAREN bloco ;
-listaParametros: ID (COMMA ID)* ;
+listaParametros: parametro (COMMA parametro)* ;
+parametro: ID COLON tipo ;
+tipo: ID ;
 
 escreva: PRINT LPAREN expressao ( COMMA expressao)* RPAREN ;
 leia: INPUT LPAREN expressao? RPAREN ;
@@ -38,7 +40,7 @@ declaracaoEnquanto: WHILE condicao bloco ;
 declaracaoPara: FOR ID IN expressao bloco ;
 declaracaoRetorno: RETURN expressao? ;
 
-atribuicao: ID ASSIGN atribuivel ;
+atribuicao: ID (COLON tipo)? ASSIGN atribuivel ;
 atribuivel: expressao | comandos ;
 
 // -----------------------
@@ -98,6 +100,7 @@ GTE: '>=' ;
 LT: '<' ;
 GT: '>' ;
 ASSIGN: '=' ;
+COLON: ':' ;
 
 PLUS: '+' ;
 MINUS: '-' ;

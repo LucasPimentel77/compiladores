@@ -1,0 +1,55 @@
+def fatorial(n: int) {
+    if (n < 2) {
+        return 1
+    }
+    # Chamada recursiva: n * fatorial(n - 1)
+    sub = n - 1
+    ret = n * fatorial(sub)
+    return ret
+}
+
+# 2. Definição de Função: Combinação
+# Formula: C(n, k) = n! / (k! * (n-k)!)
+def combinacao(n: int, k: int) {
+    fat_n = fatorial(n)
+    fat_k = fatorial(k)
+    
+    diff = n - k
+    fat_diff = fatorial(diff)
+    
+    denominador = fat_k * fat_diff
+    res = fat_n / denominador
+    
+    return res
+}
+
+# 3. Programa Principal
+print("Digite o numero de linhas (n >= 1): ")
+entrada = input()
+linhas = int(entrada)
+
+if (linhas < 1) {
+    print("Erro: O numero deve ser maior ou igual a 1.")
+} else {
+    i = 0
+    while (i < linhas) {
+        texto_linha = ""
+        j = 0
+        
+        while (j <= i) {
+            # 4. Chamada de função dentro de expressão
+            valor = combinacao(i, j)
+            
+            # Formatação de string para o output
+            if (j > 0) {
+                texto_linha = texto_linha + " "
+            }
+            texto_linha = texto_linha + str(valor)
+            
+            j = j + 1
+        }
+        
+        print(texto_linha)
+        i = i + 1
+    }
+}

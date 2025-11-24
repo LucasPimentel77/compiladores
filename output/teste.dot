@@ -1,0 +1,6 @@
+digraph ParseTree {
+node [shape=ellipse, fontname="Helvetica"];
+node0 [label="programa"];
+node1 [label="<EOF>"];
+node0 -> node1;
+}

@@ -1,0 +1,44 @@
+# Triangulos - Validacao e classificacao
+# Ler medidas (a, b, c) e validar se formam um triangulo valido
+// Funcao que checa se os lados formam um triangulo valido
+# Cada funcao usa condicoes aninhadas para verificar negativos e desigualdades triangulares
+
+def lados_validos(a: number, b: number, c: number) {
+    if (a <= 0 or b <= 0 or c <= 0) {
+        return False
+    }
+
+    if (a + b <= c or a + c <= b or b + c <= a) {
+        return False
+    }
+
+    return True
+}
+
+// Função que imprime a classificação com base nas medidas fornecidas
+
+def classificar_triangulo(a: number, b: number, c: number) {
+    print("Entrada: " + a + ", " + b + ", " + c + " →")
+
+    if (not lados_validos(a, b, c)) {
+        print("Medidas inválidas")
+        return
+    }
+
+    if (a == b and b == c) {
+        print("Triângulo equilátero válido")
+    } elif (a == b or a == c or b == c) {
+        print("Triângulo isósceles válido")
+    } else {
+        print("Triângulo escaleno válido")
+    }
+}
+
+// Exemplos de chamadas com ordens variadas e casos inválidos
+classificar_triangulo(3.0, 4.0, 5.0)
+classificar_triangulo(5.0, 3.0, 4.0)
+classificar_triangulo(2.0, 2.0, 2.0)
+classificar_triangulo(2.0, 2.0, 3.0)
+classificar_triangulo(1.0, 1.0, 3.0)
+classificar_triangulo(0.0, 5.0, 5.0)
+classificar_triangulo(-1.0, 2.0, 2.0)
