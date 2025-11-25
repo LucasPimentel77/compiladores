@@ -1,2 +1,67 @@
-.vscode/
+# ============================
+#  PYTHON
+# ============================
 __pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+
+# Virtual env
+env/
+venv/
+ENV/
+.venv/
+
+# Cache do pip
+pip-wheel-metadata/
+pip-log.txt
+
+# ============================
+#  ANTLR (código gerado)
+# ============================
+generated/
+*.interp
+*.tokens
+
+# ============================
+#  ARQUIVOS TEMPORÁRIOS DO COMPILADOR
+# ============================
+output.ll
+output.bc
+output.o
+output.exe
+a.out
+*.s
+
+# Logs
+*.log
+
+# ============================
+#  EDITORES
+# ============================
+
+# VS Code
+.vscode/
+.history/
+*.code-workspace
+
+# PyCharm
+.idea/
+
+# ============================
+#  SISTEMA OPERACIONAL
+# ============================
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
