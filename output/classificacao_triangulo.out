@@ -1,0 +1,93 @@
+# ??? IR('ARG', None, '3.0', None)
+# ??? IR('ARG', None, '4.0', None)
+# ??? IR('ARG', None, '5.0', None)
+t29 = CALL classificar_triangulo 3
+# ??? IR('ARG', None, '5.0', None)
+# ??? IR('ARG', None, '3.0', None)
+# ??? IR('ARG', None, '4.0', None)
+t30 = CALL classificar_triangulo 3
+# ??? IR('ARG', None, '2.0', None)
+# ??? IR('ARG', None, '2.0', None)
+# ??? IR('ARG', None, '2.0', None)
+t31 = CALL classificar_triangulo 3
+# ??? IR('ARG', None, '2.0', None)
+# ??? IR('ARG', None, '2.0', None)
+# ??? IR('ARG', None, '3.0', None)
+t32 = CALL classificar_triangulo 3
+# ??? IR('ARG', None, '1.0', None)
+# ??? IR('ARG', None, '1.0', None)
+# ??? IR('ARG', None, '3.0', None)
+t33 = CALL classificar_triangulo 3
+# ??? IR('ARG', None, '0.0', None)
+# ??? IR('ARG', None, '5.0', None)
+# ??? IR('ARG', None, '5.0', None)
+t34 = CALL classificar_triangulo 3
+# ??? IR('u-', 't35', '1.0', None)
+# ??? IR('ARG', None, 't35', None)
+# ??? IR('ARG', None, '2.0', None)
+# ??? IR('ARG', None, '2.0', None)
+t36 = CALL classificar_triangulo 3
+
+# function lados_validos
+# ??? IR('<=', 't0', 'a', '0')
+# ??? IR('<=', 't1', 'b', '0')
+# ??? IR('or', 't2', 't0', 't1')
+# ??? IR('<=', 't3', 'c', '0')
+# ??? IR('or', 't4', 't2', 't3')
+if not None: goto L1
+# ??? IR('RETURN', None, 'False', None)
+goto L0
+L1:
+L0:
+# ??? IR('+', 't5', 'a', 'b')
+# ??? IR('<=', 't6', 't5', 'c')
+# ??? IR('+', 't7', 'a', 'c')
+# ??? IR('<=', 't8', 't7', 'b')
+# ??? IR('or', 't9', 't6', 't8')
+# ??? IR('+', 't10', 'b', 'c')
+# ??? IR('<=', 't11', 't10', 'a')
+# ??? IR('or', 't12', 't9', 't11')
+if not None: goto L3
+# ??? IR('RETURN', None, 'False', None)
+goto L2
+L3:
+L2:
+# ??? IR('RETURN', None, 'True', None)
+
+# function classificar_triangulo
+# ??? IR('+', 't13', '"Entrada: "', 'a')
+# ??? IR('+', 't14', 't13', '", "')
+# ??? IR('+', 't15', 't14', 'b')
+# ??? IR('+', 't16', 't15', '", "')
+# ??? IR('+', 't17', 't16', 'c')
+# ??? IR('+', 't18', 't17', '" →"')
+# ??? IR('PRINT', None, 't18', None)
+# ??? IR('ARG', None, 'a', None)
+# ??? IR('ARG', None, 'b', None)
+# ??? IR('ARG', None, 'c', None)
+t19 = CALL lados_validos 3
+# ??? IR('not', 't20', 't19', None)
+if not None: goto L5
+# ??? IR('PRINT', None, '"Medidas inválidas"', None)
+# ??? IR('RETURN', None, None, None)
+goto L4
+L5:
+L4:
+# ??? IR('==', 't21', 'a', 'b')
+# ??? IR('==', 't22', 'b', 'c')
+# ??? IR('and', 't23', 't21', 't22')
+if not None: goto L7
+# ??? IR('PRINT', None, '"Triângulo equilátero válido"', None)
+goto L6
+L7:
+# ??? IR('==', 't24', 'a', 'b')
+# ??? IR('==', 't25', 'a', 'c')
+# ??? IR('or', 't26', 't24', 't25')
+# ??? IR('==', 't27', 'b', 'c')
+# ??? IR('or', 't28', 't26', 't27')
+if not None: goto L8
+# ??? IR('PRINT', None, '"Triângulo isósceles válido"', None)
+goto L6
+L8:
+# ??? IR('PRINT', None, '"Triângulo escaleno válido"', None)
+L6:
