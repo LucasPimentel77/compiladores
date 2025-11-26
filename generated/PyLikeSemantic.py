@@ -400,6 +400,9 @@ class SemanticAnalyzer(PyLikeVisitor):
         if left_type is None:
             return None
 
+        if len(unarios) == 1:
+            return left_type
+
         for unario in unarios[1:]:
             right_type = self.visit(unario)
             if right_type is None:

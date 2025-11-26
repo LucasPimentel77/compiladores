@@ -18,7 +18,7 @@ def lados_validos(a: number, b: number, c: number) {
 // Função que imprime a classificação com base nas medidas fornecidas
 
 def classificar_triangulo(a: number, b: number, c: number) {
-    print("Entrada: " + a + ", " + b + ", " + c + " →")
+    print("Entrada:", a, ",", b, ",", c, " →")
 
     if (not lados_validos(a, b, c)) {
         print("Medidas inválidas")

@@ -5,9 +5,7 @@ from generated.PyLikeParser import PyLikeParser
 from tools.criar_dot import antlr_tree_to_dot
 from generated.PyLikeSemantic import SemanticAnalyzer
 from graphviz import Source
-from codegen.ir_generator import IRGenerator
-from codegen.code_generator import CodeGenerator
-from codegen.llvm_generator import LLVMCodeGen
+from codegen.c_generator import CCodeGenerator
 
 NOME_DO_ARQUIVO = "classificacao_triangulo"
 
@@ -53,34 +51,10 @@ if hasattr(analyzer, "errors") and analyzer.errors:
 else:
     print("Análise semântica concluída com sucesso: nenhum erro encontrado.")
 
-print("\nGerando IR...")
+generator = CCodeGenerator()
+codigo_c = generator.generate(tree)
+saida_c = f"output/{NOME_DO_ARQUIVO}.c"
+with open(saida_c, "w", encoding="utf-8") as arquivo_c:
+    arquivo_c.write(codigo_c)
 
-ir_gen = IRGenerator()
-ir = ir_gen.generate(tree)
-
-print(f"IR gerado: {ir}")
-
-for instr in ir:
-    print("  ", instr)
-
-# print("\nGerando código final...")
-
-# code_gen = CodeGenerator()
-# codigo_final = code_gen.generate(ir)
-
-# print("\nCódigo final gerado:")
-# print(codigo_final)
-
-# with open(f"output/{NOME_DO_ARQUIVO}.out", "w", encoding="utf-8") as f:
-#     f.write(codigo_final)
-
-# print(f"\nArquivo salvo em output/{NOME_DO_ARQUIVO}.out")
-
-print("Gerando LLVM IR...")
-llvm = LLVMCodeGen()
-codigo_final = llvm.generate(ir)
-
-with open(f"output/{NOME_DO_ARQUIVO}.ll", "w", encoding="utf-8") as f:
-    f.write(codigo_final)   
-
-print(f"Arquivo LLVM gerado: output/{NOME_DO_ARQUIVO}.ll")
+print(f"Arquivo C gerado: {saida_c}")
